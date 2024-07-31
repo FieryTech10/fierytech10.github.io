@@ -259,6 +259,9 @@
                 document.getElementById('ship-image').src = shipImage;
                 document.getElementById('book-here').style.display = `block`;
             } else {
+                document.getElementById('price-ship').textContent = ``;
+                document.getElementById('premium-status').innerHTML = ''
+                document.getElementById('price-route').textContent = ``;
                 document.getElementById('price-estimate').textContent = 'Please select valid options.';
                 document.getElementById('book-here').style.display = `none`;
                 document.getElementById('ship-image').src = 'images/cruise.jpg';

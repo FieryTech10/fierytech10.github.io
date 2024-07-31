@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Form - Luminalia Investment Fund</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline CSS for quick adjustments */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: underline;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        form {
+            background-color: #282828;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #e94e77;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            background-color: #e94e77;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d43f5e;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        footer a {
+            color: wheat;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Luminalia Investment Fund</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="investments.html">Investments</a></li>
+            <li><a href="cruisesandtours.html">Cruises & Tours</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="submitform.html">Submit a Form</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1 style="text-align: center;">Luminalia Investment Application</h1>
+        <form id="customForm">
+            <label for="username">What is your Star Citizen username? (case sensitive):</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="discord">What is your Discord Username? (used to contact you about your quote):</label>
+            <input type="text" id="discord" name="discord" required>
+            
+            <label for="scu">How much SCU would you like to purchase? (minimum 5 maximum 576):</label>
+            <input type="number" id="scu" name="scu" min="5" max="576" required>
+            
+            <label for="insurance">Would you like Insurance? <small>Insurance is non-refundable (even in the case of loss!)</small></label>
+            <select id="insurance" name="insurance" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            
+            <label for="trades">How many trades would you like to invest in?<br> <small>This is the risk factor. 1 Being the lowest risk with 3 being the highest, but also granting the best run for your money.</small></label>
+            <select id="trades" name="trades" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+           
+            <p>By submitting this form you are agreeing to our Terms and Conditions.</p>
+            <small><b>After clicking submit, you will be taken to a google form. Please scroll down and click submit after carefully reviewing your data.</b></small><br>
+            <input type="submit" value="Submit">
+            <small></small>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2954 Luminalia Investment Fund. All rights reserved. | <a href="termsandconditions.html">Terms And Conditions</a></p>
+    </footer>
+    <script>
+        document.getElementById('customForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var username = document.getElementById('username').value;
+            var discord = document.getElementById('discord').value;
+            var scu = document.getElementById('scu').value;
+            var insurance = document.getElementById('insurance').value;
+            var trades = document.getElementById('trades').value;
+
+            var baseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeDzdMXHo9L2WfRxB1S8y8yrywnQSL44RYabp8N-a6AFqXW8Q/viewform?usp=pp_url';
+            var prefillUrl = baseUrl +
+                '&entry.159890552=' + encodeURIComponent(username) + 
+                '&entry.188932043=' + encodeURIComponent(discord) + 
+                '&entry.953536295=' + encodeURIComponent(scu) + 
+                '&entry.1900035521=' + encodeURIComponent(insurance) + 
+                '&entry.1460796612=' + encodeURIComponent(trades); 
+
+            // Redirect to the pre-filled Google Form URL
+            window.location.href = prefillUrl;
+        });
+    </script>
+</body>
+</html>
