@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruises & Tours - Luminalia Investment Fund</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1b1b1b;
+            margin: 0;
+            padding: 0;
+            color: #ccc;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li a {
+            display: block;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover {
+            background-color: #666;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .highlight {
+            color: #e94e77;
+        }
+        .content {
+            background-color: #282828;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .box {
+            background-color: #333;
+            border-radius: 5px;
+            padding: 20px;
+            width: 48%;
+        }
+        .box img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .box h3 {
+            margin-bottom: 10px;
+        }
+        .box p {
+            margin-bottom: 20px;
+        }
+        .box button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .box button:hover {
+            background-color: #357ab8;
+            transform: scale(1.05);
+        }
+        .box button:active {
+            transform: scale(1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cruises & Tours</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="investments.html">Investments</a></li>
+            <li><a href="cruisesandtours.html"><u>Cruises & Tours</u></a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="section">
+            <div class="box">
+                <img src="images/cruise.jpg" alt="Cruise Cover Photo">
+                <h3>Interstellar Cruises</h3>
+                <p>Experience the vastness of the universe like never before with our luxury interstellar cruises. Travel to distant star systems, enjoy unparalleled comfort, and indulge in exquisite amenities aboard our state-of-the-art cruise ships.<br><br>With plenty of legroom and our on-board beds, you can enjoy maximum comfort during your cruise to your select destination!</p>
+                <button onclick="window.location.href='cruise-details.html'">Learn More</button>
+            </div>
+            <div class="box">
+                <img src="images/tours.jpg" alt="Tour Cover Photo">
+                <h3>Exploratory Tours</h3>
+                <p>Join our guided tours and discover the hidden gems of the universe. From exploring uncharted planets to immersing yourself in the cultures of different star systems, our tours offer an unforgettable adventure for every explorer.<br><br>Tours will often take you to sightseeing locations, tourist landmarks and more! Complmentary meals and drink are supplied, with an optional upgrade or option to purchase more beverages on flight!</p>
+                <button onclick="window.location.href='tour-details.html'">Learn More</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2954 Luminalia Investment Fund. All rights reserved. | A proud member of the United Empire of Earth (UEE)</p>
+    </footer>
+</body>
+</html>

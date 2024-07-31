@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investments - Luminalia Investment Fund</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1b1b1b;
+            margin: 0;
+            padding: 0;
+            color: #ccc;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li a {
+            display: block;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #555;
+            min-width: 160px;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav ul li ul li {
+            display: block;
+        }
+        nav ul li ul li a:hover {
+            background-color: #666;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .highlight {
+            color: #e94e77;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .content {
+            background-color: #282828;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .investment-form {
+            margin-top: 20px;
+        }
+        .investment-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .investment-form select, .investment-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        .investment-form button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .result {
+            background-color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+    <script>
+        function calculateInvestment() {
+            const numRuns = document.getElementById('num-runs').value;
+            const scu = document.getElementById('scu').value;
+
+            if (scu < 5 || scu > 576) {
+                alert('Please enter a number of SCU between 5 and 576.');
+                return;
+            }
+            
+            const scuCost = 2216;
+            const scuSellPrice = 2814;
+            const profitMargins = [0.4, 0.5, 0.6];
+            const tradeMultiplier = [1, 2, 3];
+            const baseInsurance = 0.1;
+            const memberInsurance = 0.05;
+
+            const investmentCost = scu * scuCost;
+            const profitMargin = profitMargins[numRuns - 1];
+            const totalRevenue = scu * scuSellPrice;
+            const preProfit = totalRevenue - investmentCost;
+            const expectedProfit = preProfit - (preProfit * profitMargin);
+            const expectedReturn = expectedProfit * tradeMultiplier[numRuns - 1];
+            const totalReturn = expectedReturn + investmentCost;
+            const baseInsuranceCost = investmentCost * baseInsurance;
+            const memberInsuranceCost = investmentCost * memberInsurance;
+
+            document.getElementById('investment-cost').textContent = investmentCost.toFixed(0) + ' UEC';
+            document.getElementById('expected-return').textContent = expectedReturn.toFixed(0) + ' UEC';
+            document.getElementById('total-return').textContent = totalReturn.toFixed(0) + ' UEC';
+            document.getElementById('insurance-cost').textContent = baseInsuranceCost.toFixed(0) + ' UEC or ' + memberInsuranceCost.toFixed(0) + ' UEC for members!';
+
+            const resultDiv = document.querySelector('.result');
+            resultDiv.style.display = 'block';
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Investment Cost Calculator</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="investments.html"><u>Investments</u></a></li>
+            <li><a href="cruisesandtours.html">Cruises & Tours</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h2>Invest in Our Cargo Runs</h2>
+            <p>At Luminalia Investment Fund, you can choose to invest in our cargo runs over 1, 2, or 3 runs. Select the number of SCU (Standard Cargo Units) you wish to invest, ranging from 5 to 576. Each SCU is valued at approximately 2216 UEC.</p>
+            <div class="investment-form">
+                <form onsubmit="event.preventDefault(); calculateInvestment();">
+                    <label for="num-runs">Number of Runs:</label>
+                    <select id="num-runs" name="num-runs">
+                        <option value="1">1 Run</option>
+                        <option value="2">2 Runs</option>
+                        <option value="3">3 Runs</option>
+                    </select>
+                    <label for="scu">Number of SCU:</label>
+                    <input type="number" id="scu" name="scu" min="5" max="576">
+                    <button type="submit">Invest Now</button>
+                </form>
+            </div>
+            <div class="result">
+                <h3>Investment Details</h3>
+                <p>Investment Cost: <span id="investment-cost"></span></p>
+                <p>Expected Return: <span id="expected-return"></span></p>
+                <p>Expected Total: <span id="total-return"></span></p>
+                <p>Insurance Cost (optional): <span id="insurance-cost"></span></p>
+                <small>*Please note this is only an <b>estimated cost and return</b>, actual results may differ.</small>
+                <p>In order to secure your investment please visit and fill out <a href="https://forms.gle/tfJu7QLRddaKhNb86" style="color:wheat">our form</a>. After completion you will be contacted by staff with your invoice and contract.</p>
+            </div>
+            <h3>Investment Details</h3>
+            <p>When you invest in our cargo runs, you are investing in the future of interstellar trade. Our fleet is equipped with the latest technology to ensure the safety and efficiency of our operations. With a team of experienced pilots and navigators, we guarantee that your investment is in good hands.</p>
+            <p>For any questions or further information, please contact us. We are here to help you make the most out of your investments.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2954 Luminalia Investment Fund. All rights reserved. | A proud member of the United Empire of Earth (UEE)</p>
+    </footer>
+</body>
+</html>
