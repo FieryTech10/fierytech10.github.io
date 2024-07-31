@@ -33,11 +33,19 @@
             position: relative;
         }
         nav ul li a {
-            display: block;
-            padding: 14px 20px;
-            text-decoration: none;
-            color: white;
-        }
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #666;
+    color: #fff;
+    text-decoration: underline;
+}
+
         nav ul li ul {
             display: none;
             position: absolute;
