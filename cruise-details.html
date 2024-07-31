@@ -154,7 +154,7 @@
                 <div class="dropdown-container">
                     <div class="dropdown-group">
                         <div>
-                            <label for="from-location">From:</label>
+                            <label for="from-location">Departing From:</label>
                             <select id="from-location" name="from-location">
                                 <option value="Area18 - ArcCorp">Area18 - ArcCorp</option>
                                 <option value="New Babbage - MicroTech">New Babbage - MicroTech</option>
@@ -163,7 +163,7 @@
                             </select>
                         </div>
                         <div>
-                            <label for="to-location">To:</label>
+                            <label for="to-location">Destination:</label>
                             <select id="to-location" name="to-location">
                                 <option value="Area18 - ArcCorp">Area18 - ArcCorp</option>
                                 <option value="New Babbage - MicroTech">New Babbage - MicroTech</option>
@@ -172,12 +172,12 @@
                             </select>
                         </div>
                     </div>
-                    <label for="ship-type">Select Ship:</label>
+                    <label for="ship-type">Ship Reservation:</label>
                     <select id="ship-type" name="ship-type">
-                        <option value="Origin 600i">Origin 600i - 8000 UEC</option>
-                        <option value="Constellation Phoenix">Constellation Phoenix - 5000 UEC</option>
-                        <option value="Origin 325a">Origin 325a - 3000 UEC</option>
-                        <option value="C8R Pisces">C8R Pisces - 1500 UEC</option>
+                        <option value="Origin 600i">Origin 600i - 12,999 UEC</option>
+                        <option value="Constellation Phoenix">Constellation Phoenix - 7,832 UEC</option>
+                        <option value="Origin 325a">Origin 325a - 4,728 UEC</option>
+                        <option value="C8R Pisces">C8R Pisces - 2,348 UEC</option>
                     </select>
                     <label for="class-type">Select Class:</label>
                     <select id="class-type" name="class-type">
@@ -210,25 +210,26 @@
     <script>
         // JavaScript for Price Calculation with Ship Prices
         const prices = {
-            "Area18 - ArcCorp_New Babbage - MicroTech": { base: 15000, premium: 18000 },
-            "Area18 - ArcCorp_Lorville - Hurston": { base: 12000, premium: 15000 },
-            "Area18 - ArcCorp_Orison - Crusader": { base: 13000, premium: 16000 },
-            "New Babbage - MicroTech_Lorville - Hurston": { base: 10000, premium: 13000 },
-            "New Babbage - MicroTech_Orison - Crusader": { base: 14000, premium: 17000 },
-            "New Babbage - MicroTech_Area18 - ArcCorp": { base: 14000, premium: 17000 },
-            "Lorville - Hurston_Orison - Crusader": { base: 11000, premium: 14000 },
-            "Lorville - Hurston_New Babbage - MicroTech": { base: 11000, premium: 14000 },
-            "Lorville - Hurston_Area18 - ArcCorp": { base: 11000, premium: 14000 },
-            "Orison - Crusader_Area18 - ArcCorp": { base: 11000, premium: 14000 },
-            "Orison - Crusader_New Babbage - MicroTech": { base: 11000, premium: 14000 },
-            "Orison - Crusader_Lorville - Hurston": { base: 11000, premium: 14000 }
+            "Area18 - ArcCorp_New Babbage - MicroTech": { base: 14523, premium: 18547 },
+            "Area18 - ArcCorp_Lorville - Hurston": { base: 12584, premium: 16587 },
+            "Area18 - ArcCorp_Orison - Crusader": { base: 13576, premium: 17562 },
+            "New Babbage - MicroTech_Lorville - Hurston": { base: 11543, premium: 15568 },
+            "New Babbage - MicroTech_Orison - Crusader": { base: 14092, premium: 18038 },
+            "New Babbage - MicroTech_Area18 - ArcCorp": { base: 14047, premium: 18019 },
+            "Lorville - Hurston_Orison - Crusader": { base: 11085, premium: 15029 },
+            "Lorville - Hurston_New Babbage - MicroTech": { base: 11094, premium: 15032 },
+            "Lorville - Hurston_Area18 - ArcCorp": { base: 11058, premium: 15023 },
+            "Orison - Crusader_Area18 - ArcCorp": { base: 11094, premium: 15076 },
+            "Orison - Crusader_New Babbage - MicroTech": { base: 11062, premium: 15047 },
+            "Orison - Crusader_Lorville - Hurston": { base: 11057, premium: 15068 }
         };
 
+
         const shipPrices = {
-            "C8R Pisces": 2000,
-            "Origin 325a": 3000,
-            "Constellation Phoenix": 5000,
-            "Origin 600i": 8000
+            "C8R Pisces": 2348,
+            "Origin 325a": 4728,
+            "Constellation Phoenix": 7832,
+            "Origin 600i": 12999
         };
 
         function calculatePrice() {
