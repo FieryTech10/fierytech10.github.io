@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruise Details - Luminalia Investment Fund</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1b1b1b;
+            margin: 0;
+            padding: 0;
+            color: #ccc;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+        nav ul li a {
+            display: block;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover {
+            background-color: #666;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        /* CSS for Dropdowns and Price Section */
+        .dropdown-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .dropdown-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .dropdown-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .dropdown-container select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #666;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .calculate-price {
+            background-color: #282828;
+            padding: 20px;
+            border-radius: 5px;
+            color: #e94e77;
+            margin-bottom: 20px;
+        }
+
+        .calculate-price h3 {
+            margin-bottom: 10px;
+        }
+
+        .calculate-price img {
+            max-width: 400px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .calculate-price select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #666;
+            background-color: #333;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .calculate-price button {
+            background-color: #e94e77;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .calculate-price button:hover {
+            background-color: #d43f5e;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cruise Details</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="investments.html">Investments</a></li>
+            <li><a href="cruisesandtours.html">Cruises & Tours</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="membership.html">Membership</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="dropdown-container">
+            <h3>Select Your Cruise Route</h3>
+            <!-- HTML for Dropdowns and Calculate Button -->
+            <form>
+                <div class="dropdown-container">
+                    <div class="dropdown-group">
+                        <div>
+                            <label for="from-location">From:</label>
+                            <select id="from-location" name="from-location">
+                                <option value="Area18 - ArcCorp">Area18 - ArcCorp</option>
+                                <option value="New Babbage - MicroTech">New Babbage - MicroTech</option>
+                                <option value="Lorville - Hurston">Lorville - Hurston</option>
+                                <option value="Orison - Crusader">Orison - Crusader</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="to-location">To:</label>
+                            <select id="to-location" name="to-location">
+                                <option value="Area18 - ArcCorp">Area18 - ArcCorp</option>
+                                <option value="New Babbage - MicroTech">New Babbage - MicroTech</option>
+                                <option value="Lorville - Hurston">Lorville - Hurston</option>
+                                <option value="Orison - Crusader">Orison - Crusader</option>
+                            </select>
+                        </div>
+                    </div>
+                    <label for="ship-type">Select Ship:</label>
+                    <select id="ship-type" name="ship-type">
+                        <option value="Origin 600i">Origin 600i - 8000 UEC</option>
+                        <option value="Constellation Phoenix">Constellation Phoenix - 5000 UEC</option>
+                        <option value="Origin 325a">Origin 325a - 3000 UEC</option>
+                        <option value="C8R Pisces">C8R Pisces - 1500 UEC</option>
+                    </select>
+                    <label for="class-type">Select Class:</label>
+                    <select id="class-type" name="class-type">
+                        <option value="standard">Standard</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                    </form>
+                    <div class="cruise-details">
+                        <h3>About Our Cruises</h3>
+                        <p>Experience the luxury and adventure of space travel with our exclusive cruise options. Whether you're looking for a relaxing journey or an exciting exploration, our cruises offer unparalleled comfort and service. From the bustling metropolis of ArcCorp to the serene beauty of Crusader, our routes cover the best destinations in the universe.</p>
+                        <p>You may be wondering what the difference between Standard and Premium class is, the answer is lots. Premium will net you a 10% discount from our gift selection and 25% discount on beverages. You also will get a free meal coupon (contains 2 food items and 1 drink) to enjoy while in-flight! Your carry-on will also double, allowing you to bring along more baggage if you would like. Oh, the most important part! If you purchase premium, you can bring your friend along with their ticket costing <b>50% OFF!!!</b>*</p>
+                        <p>Our fleet includes a variety of top-of-the-line ships, each designed to provide the ultimate travel experience. Enjoy state-of-the-art amenities, breathtaking views, and a crew dedicated to making your voyage unforgettable. Select your preferred route and ship to start your journey today.</p>
+                        <small><i>*Valid for 1 person per premium ticket, any class ticket, must be purchased for same cruise.</i></small>
+                    </div>
+                <button class="calculate-price" type="button" onclick="calculatePrice()">Calculate Price</button>
+                <div id="price-details" class="calculate-price">
+                    <p id="premium-status"></p>
+                    <p id="price-ship"></p>
+                    <p id="price-route"></p>
+                    <p id="price-estimate"></p>
+                    <p id="book-here" style="display: none;">Confirm your booking <a href="bookacruise.html" style="color:wheat">here</a>.</p>
+                    <img src="images/cruise.jpg" id="ship-image" src="" alt="Ship Image">
+                </div>
+
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2954 Luminalia Investment Fund. All rights reserved. | <a href="termsandconditions.html" style="color: wheat;">Terms And Conditions</a></p>
+    </footer>
+    <script>
+        // JavaScript for Price Calculation with Ship Prices
+        const prices = {
+            "Area18 - ArcCorp_New Babbage - MicroTech": { base: 15000, premium: 18000 },
+            "Area18 - ArcCorp_Lorville - Hurston": { base: 12000, premium: 15000 },
+            "Area18 - ArcCorp_Orison - Crusader": { base: 13000, premium: 16000 },
+            "New Babbage - MicroTech_Lorville - Hurston": { base: 10000, premium: 13000 },
+            "New Babbage - MicroTech_Orison - Crusader": { base: 14000, premium: 17000 },
+            "New Babbage - MicroTech_Area18 - ArcCorp": { base: 14000, premium: 17000 },
+            "Lorville - Hurston_Orison - Crusader": { base: 11000, premium: 14000 },
+            "Lorville - Hurston_New Babbage - MicroTech": { base: 11000, premium: 14000 },
+            "Lorville - Hurston_Area18 - ArcCorp": { base: 11000, premium: 14000 },
+            "Orison - Crusader_Area18 - ArcCorp": { base: 11000, premium: 14000 },
+            "Orison - Crusader_New Babbage - MicroTech": { base: 11000, premium: 14000 },
+            "Orison - Crusader_Lorville - Hurston": { base: 11000, premium: 14000 }
+        };
+
+        const shipPrices = {
+            "C8R Pisces": 2000,
+            "Origin 325a": 3000,
+            "Constellation Phoenix": 5000,
+            "Origin 600i": 8000
+        };
+
+        function calculatePrice() {
+            const fromLocation = document.getElementById('from-location').value;
+            const toLocation = document.getElementById('to-location').value;
+            const classType = document.getElementById('class-type').value;
+            const shipType = document.getElementById('ship-type').value;
+
+            const routeKey = `${fromLocation}_${toLocation}`;
+            const priceInfo = prices[routeKey];
+            const shipPrice = shipPrices[shipType];
+
+            if (priceInfo && shipPrice !== undefined) {
+                const selectedPrice = classType === 'premium' ? priceInfo.premium : priceInfo.base;
+                const totalPrice = selectedPrice + shipPrice;
+                const shipImage = `images/${shipType.replace(/ /g, '-')}.jpg`; // Adjust path as needed
+                if (classType == 'premium') {
+                    document.getElementById('premium-status').innerHTML = 'Class: Premium'
+                }
+                else {
+                    document.getElementById('premium-status').innerHTML = 'Class: Standard'
+                }
+
+
+                document.getElementById('price-ship').textContent = `Ship Price: ${shipPrice} UEC`;
+                document.getElementById('price-route').textContent = `Route Price: ${selectedPrice} UEC`;
+                document.getElementById('price-estimate').textContent = `Total Estimated Price: ${totalPrice} UEC`;
+                document.getElementById('ship-image').src = shipImage;
+                document.getElementById('book-here').style.display = `block`;
+            } else {
+                document.getElementById('price-estimate').textContent = 'Please select valid options.';
+                document.getElementById('book-here').style.display = `none`;
+                document.getElementById('ship-image').src = 'images/cruise.jpg';
+            }
+        }
+
+
+    </script>
+</body>
+</html>
