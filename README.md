@@ -4,7 +4,7 @@
 
 Welcome to Luminalia Investment Fund, a premier financial institution operating within the Star Citizen universe. Our mission is to provide exceptional financial services to the citizens of the universe, ensuring secure and profitable investment opportunities for all.
 
-Founded by a group of dedicated individuals who understand the importance of financial security and growth, we are committed to helping our clients achieve their financial goals. Our team comprises experts in finance, trade, and security, all working together to deliver the best possible outcomes for our investors.
+Founded by two dedicated individuals who understand the importance of financial security and growth, we are committed to helping our clients achieve their financial goals. Our team comprises experts in finance, trade, and security, all working together to deliver the best possible outcomes for our investors.
 
 ## What We Do
 
