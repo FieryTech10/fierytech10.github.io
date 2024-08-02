@@ -51,11 +51,6 @@ By choosing Luminalia Investment Fund, you are not just investing your UEC; you 
 
 ---
 
-
-**Note**: This readme is for a role-playing financial institution within the Star Citizen universe and should be treated as a fictional representation.
-
----
-
 ### Contact
 
 - **Discord**: [Luminalia Investment Fund](https://discord.gg/YwBZGsjAQx)
