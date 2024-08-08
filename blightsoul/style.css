@@ -1,0 +1,417 @@
+      body {
+        background-repeat: no-repeat;
+        background-size: cover;
+		  }
+		  
+		  .btn {
+		  		padding: 10px;
+				size: 40px;
+				color: white;
+				background-color: red;
+		  }
+		  
+		  #stats h3 {
+		  	color: white;
+		  }
+		  
+		          .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+              }
+            
+            .modal-body {
+                padding: 2px 16px;
+            }
+            
+            .modal-footer {
+                padding: 2px 16px;
+                background-color: #FF0000;
+                color: white;
+            }
+            
+            .modal-content {
+                position: relative;
+                background-color: #333;
+                color: lightgray;
+                text-align: center;
+                margin: auto;
+                padding: 0;
+                border: 1px solid #888;
+                width: 80%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                animation-name: animatetop;
+                animation-duration: 0.4s;
+            }
+            
+            @keyframes animatetop {
+                from {top: -300px; opacity: 0;}
+                to {top: 0px; opacity: 1;}
+            }
+            
+            .close1 {
+                color: #FF0000;
+                float: right;
+                font-size: 50px;
+                font-weight: bold;
+            }
+            
+            .close1:hover, .close1:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+		  
+		  		.tooltip {
+  					position: relative;
+  					display: inline-block;
+				}
+
+				.tooltip .tooltiptext {
+				  	visibility: hidden;
+				  	width: 120px;
+				  	background-color: black;
+				  	color: #fff;
+				  	text-align: center;
+				   border-radius: 6px;
+  					padding: 5px 0;
+				  	/* Position the tooltip */
+				  	position: absolute;
+				  	z-index: 1;
+ 				  	top: -5px;
+				  	left: 105%;
+				}
+
+				.tooltip:hover .tooltiptext {
+  					visibility: visible;
+				}
+            
+            .use {
+					background-color: gold;
+				}
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropup {
+  position: relative;
+  display: inline-block;
+}
+
+.dropup-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  bottom: 50px;
+  z-index: 1;
+}
+
+.dropup-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropup-content a:hover {background-color: #ccc}
+
+.dropup:hover .dropup-content {
+  display: block;
+}
+
+.dropup:hover .dropbtn {
+  background-color: #2980B9;
+}
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px / 50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px / 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #333;
+  border-radius: 10px;
+  width: 30%;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  color: #fff;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #fff;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.popup .close:hover {
+  color: #06D85F;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+.popup button {
+  background: #06D85F;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#sawmil {
+  background: #06D85F;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.popup button:hover {
+  background: #04b45f;
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    width: 70%;
+  }
+  .popup {
+    width: 70%;
+  }
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Skilltree modal */
+.skilltreeModal {
+  display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            padding-top: 60px;
+}
+.skilltreeModal-content {
+  background-color: #2c2c2c;
+            color: #ddd;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            animation: slideIn 2.5s;
+}
+@keyframes slideIn {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+.closeSkilltree {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.closeSkilltree:hover,
+.closeSkilltree:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Button styles */
+#openSkillTreeBtn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 7.5px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+#openSkillTreeBtn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+#openSkillTreeBtn:active {
+  background-color: #3e8e41;
+}
+
+/* Skill tree button styles */
+.skill-btn {
+  background: linear-gradient(45deg, #6a5acd, #836fff);
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 10px 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.skill-btn:hover {
+  background: linear-gradient(45deg, #836fff, #6a5acd);
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+.skill-btn:active {
+  background: linear-gradient(45deg, #5a4ebc, #6954b8);
+  transform: scale(1.03);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2c2c2c;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.stats-box {
+  position: fixed;
+  top: 10%;
+  left: 0;
+  width: 250px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 10px 10px 0;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+.stats-box h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #06D85F;
+}
+
+.stats-box p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.stats-box span {
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.stats-box:hover {
+  transform: translateX(10px);
+}
+
+@media screen and (max-width: 700px) {
+  .stats-box {
+      width: 200px;
+      padding: 15px;
+  }
+
+  .stats-box h2 {
+      font-size: 20px;
+  }
+
+  .stats-box p {
+      font-size: 16px;
+  }
+}

@@ -1,0 +1,263 @@
+<html>
+    <head>
+      <script src="https://dunggramer.github.io/disable-devtool/disable-devtool.min.js" defer></script>
+        <title>Blightsoul - Run a business! (ALPHA)</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="scripts/vars.js"></script>
+      <script src="scripts/dataSaveLoad.js"></script>
+    </head>
+    
+    <body>
+	 <!-- THE START -->
+	 <h2 id=start style=color:white;>Info:<br><br>Blightsoul is a medieval-themed text based idle game set in a world filled with magic and adventure. The player takes on the role of a young entrepreneur seeking to create their own business in this fantasy world. As they journey through the land, they will encounter various challenges and opportunities to grow their business, from trading goods with merchants to battling fierce monsters for valuable treasures. Along the way, players will also encounter a cast of colorful characters, each with their own unique stories and quests to complete. With its immersive world and rich gameplay, Blightsoul is sure to keep players engaged for hours on end.<br><br>After clicking the below button, please find the "next" button to proceed through the story.<br><br><span style="color:yellow;" onclick=start()>Click Me To Continue.</span><br><br><span style="color: black;">For questions, support or to suggest features, please contact FieryVex via Discord</span></h2>
+	 <!-- GAME -->
+	 	<div id=game style=display:none;>
+    		<table border=1 width=100% height=100%>
+				<tr>
+					<td width=34% height=100% rowspan=2>
+            <div class="stats-box">
+						<div id="stats">
+							<h4 id=gold style="color:yellow;">Error</h4>
+							<h1>Your Stats</h1>
+							<h2 id=level style="color:white;">error</h2>
+							<h3 id=health>error</h3>
+							<h3 id=attack>please contact developer for fix</h3>
+							<h3 id=defence>error</h3>
+							<h3 id=mana>error</h3>
+							<h3 id=exp>error</h3>
+            </div>
+             
+              <script src="scripts/stats/skilltree.js"></script>
+              <!-- Skilltree -->
+               <button id="openSkillTreeBtn">Open Skill Tree</button>
+
+
+                <h4 id="skillpoints" style="color:yellow;">error</h4>
+                <button id="myBtn" class="btn"><span>Open Inventory</span></button>
+                <p style="color:gold;">Version: 0.1 *ALPHA*</p>
+            <button><a href = "stuff/log.txt" target = "_blank">Dev logs</a></button>
+            <button><a href = "stuff/credits.txt" target = "_blank">Credits</a></button>
+</div>
+
+<div id="skillTreeModal" class="skilltreeModal">
+  <div class="skilltreeModal-content">
+      <span class="closeSkilltree">&times;</span>
+      <h2>Skill Tree</h2>
+      <p>Skill Points: <span id="skillPointsDisplay">0</span></p>
+      <h3>Stats</h3>
+      <button class="skill-btn" onclick="upgradeMaxHp()">Upgrade Max HP (Cost: <span id="spCostHpDisplay">1</span>)</button>
+      <button class="skill-btn" onclick="upgradeMaxMana()">Upgrade Max Mana (Cost: <span id="spCostManaDisplay">1</span>)</button>
+      <button class="skill-btn" onclick="upgradeAtk()">Upgrade Attack (Cost: <span id="spCostAtkDisplay">1</span>)</button>
+      <button class="skill-btn" onclick="upgradeDef()">Upgrade Defense (Cost: <span id="spCostDefDisplay">1</span>)</button>
+      <h3>Perks</h3>
+      <button class="skill-btn" onclick="upgradeCountdown()">Reduce Sell Time (Cost: <span id="spCostCountdownUpgradeDisplay">1</span>)</button>
+      <button class="skill-btn" onclick="upgradeXpPerClaim()">More Exp Per Claim (Cost: <span id="spCostXpPerClaimDisplay">1</span>)</button>
+      <button class="skill-btn" onclick="upgradeIncomeMultiplier()">More Income Per Stock (Cost: <span id="spCostIncomeMultiplierDisplay">1</span>)</button>
+  </div>
+</div>
+						</div>
+            <!-- Inventory -->
+                  
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                        <span class="close1">&times;</span>
+                    <div class="modal-body">
+                        <h2>Buffs:</h2>
+                        <div id="armour">Armour: Beggars Rags</div><br>
+                        <div id="weapon">Weapon: Fat Stick</div><br>
+								<div id="pet">Pet: None</div>
+                    </div>
+						  <div class="modal-body">
+						  <!-- Items -->
+						  <h2>Items:</h2>
+						  <h3>Common</h3>
+						  		<div class="tooltip"><p id=logs>0x Logs</p>
+                				<span class="tooltiptext">Found in a forest or in the market. Can also be achieved through missions.</span>
+            				</div><br>
+								<div class="tooltip"><p id=planks>0x Planks</p>
+                				<span class="tooltiptext">Crafted from logs. Can be achieved from missions.</span>
+            				</div><br>
+								<h3>Uncommon</h3>
+								<div class="tooltip"><p id=ironBar>0x Iron Bar</p>
+                				<span class="tooltiptext">Can be found mining. Can be achieved from missions.</span>
+            				</div><br>
+								<div class="tooltip"><p id=metalSheets>0x Metal Sheet</p>
+                				<span class="tooltiptext">Made from iron bars.</span>
+            				</div><br>
+								<h3>Rare</h3>
+								<div class="tooltip"><p id=goldBar>0x Gold Bar</p>
+                				<span class="tooltiptext">Can be found mining. Can be achieved from missions.</span>
+            				</div><br>
+								<h3>Epic</h3>
+								<div class="tooltip"><p id=mythrilBar>0x Mythril Bar</p>
+                				<span class="tooltiptext">Can be found mining. Can be achieved from missions.</span>
+            				</div><br>
+								<h3>Legendary</h3>
+								<div class="tooltip"><p id=petSummon>0x Pet Summon</p>
+                				<span class="tooltiptext">Can rarely be a mission reward. Can be obtained in a boss fight.</span>
+            				</div><br>
+								<h3>Mystic</h3>
+								<div class="tooltip"><p id=fireBottle>0x Fire Storm In A Bottle</p>
+                				<span class="tooltiptext">Obtainable only in the market for 10,000 Gold. (During special events)</span>
+            				</div><br>
+								<div class="tooltip"><p id=blizzardBottle>0x Blizzard In A Bottle</p>
+                				<span class="tooltiptext">Obtainable only in the market for 10,000 Gold. (During special events)</span>
+            				</div><br>
+								<div class="tooltip"><p id=trappedSoul>0x Trapped Soul</p>
+                				<span class="tooltiptext">Can only be achieved from spirit realm missions. (During special events)</span>
+            				</div><br>
+						  </div>
+						  <div class="modal-footer">
+                <h3>Only click this button if you are experiencing a gamebreaking bug, you wish to delete your save or the game has updated.</h3>
+                        <button onclick=resetGame() class="btn">RESET Gamesave</button>
+						  </div>
+                </div>
+					 </div>
+						
+					</td>
+					<td width=33% height=75% colspan=1>
+						<div id=bladehood style="display:none;">
+              <img src="images/assasin.gif" width="50px" height="50px">
+              <h2>Bladehood's Business Manager</h2>
+              <div id="startBusiness">
+                <input id="bName" type="text" placeholder="Business Name"><br>
+                <input id="bDesc" type="text" placeholder="Business Description"><br>
+                <input id="bItem" type="text" placeholder="Item/Service"><br>
+                <button onclick="startBusiness()">Start New Business (Costs 500 Gold)</button><br>
+              </div>
+              <div id="closeBusiness" style="display:none;">
+                <!-- <button onclick="closeBusiness()">Close Down Business (No Refund)</button><br><br> -->
+                <div class="box">
+                  <a class="button" href="#popup1">Business Menu</a>
+                </div>
+                <div id="popup1" class="overlay">
+                  <div class="popup">
+                    <h2>Business Menu</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                      <button onclick="craftPlanks()">Use Sawmil (1x Log)</button>
+                      <button onclick="craftStock()">Craft Stock <span id="stockCraftingCost">(1x Planks)</span></button><br><br>
+                      <h2>Stats</h2>
+                      <p id="stockStat">Stock Left: 0</p>
+                      <p id="incomeStat">Income From Business: 0</p>
+                      <p id="itemServiceStat">Item/Service: N/A</p>
+                      <p id="timeLeft">Time Left: N/A</p> <!-- Countdown timer display -->
+                      <button onclick="claimIncome()">Claim Income</button>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div id=joe style="display:none;">
+              <img src="images/fat.gif" width="50px" height="50px">
+              <h2>Joe's Smeltery</h2>
+              
+            </div>
+            <div id=mine style="display:none;">
+              <img src="images/dog.gif" width="75px" height="75px">
+              <h2>Cavehound's Mine</h2>
+              
+            </div>
+            <div id=forest style="display:none;">
+              <img src="images/hood.gif" width="75px" height="75px">
+              <h2>Nighthood's Forest</h2>
+              <button id="enterFreeForest" onclick="enterFreeForest()">Enter Community Forest</button><br><br>
+              <button id="purchaseVip" onclick="purchaseVip()">Purchase VIP (150 Gold)</button>
+            </div>
+            <div id=exotic style="display:none;">
+              <img src="images/oldman.gif" width="50px" height="50px">
+              <h2>Banehag's Exotics</h2>
+              
+            </div>
+            <div id=upgrades style="display:none;">
+              <img src="images/sans.gif" width="100px" height="100px">
+              <h2>Gemghoul's Upgrades</h2>
+                <button id="sawmilShop" onclick="sawmilBuy()">Purchase Sawmil: 0 Gold</button>
+            </div>
+            <div id=petShop style="display:none;">
+              <img src="images/hawk.gif" width="50px" height="50px">
+              <h2>Cryptstrike's Pets</h2>
+              
+            </div>
+            <div id=library style="display:none;">
+              <h2>Public Library</h2>
+              <button onclick="alert('Name: Bladehood\'s Business Manager\nDescription: Bladehood\'s is a service to help open and manage your own business, even though it is a hefty price to start a business, Bladehood\'s will supply you with the ability to sell stock on their shop, collect a daily income and also sell stuff you have crafted! I don\'t see why you shouldn\'t choose Bladehood\'s when making a business!\nSignature Item/Service: Helping manage businesses.')">Bladehood's Business Manager</button>
+              <button onclick="alert(`Name: Joe's Smeltery\nDescription: Joe's Smeltery is the perfect place to smelt down your metal and create armours and weapons all by yourself! At the small crafting fee (5 Gold) and the small service fee (15 gold) you can create your own products! If you own a business and a Weapons License, you also can sell the stuff you create!\nSignature Item/Service: Crafting And Smelting`)">Joe's Smeltery</button>
+              <button onclick="alert(`Name: Cavehound's Mine\nDescription: Looking to go mining for resources? Come down to Cavehound, he can supply you with a mine, pickaxe and a bag for anything you find! However the catch is, there is a small entry fee! You can mine as much as you want, but beware, there will be monsters you will encounter down below. The entry fee is around 50 Gold, but if you die in the mine, Cavehound will not be held accountabe, so make sure you are ready for it.\nSignature Item/Service: Provides a mine and equipment to search for metals`)">Cavehound's Mine</button>
+              <button onclick="alert(`Name: Nighthood's Forest\nDescription: So you are looking to go hunting for food? Maybe you want some wood? Or maybe you just want a safe place to cool off and relax? Well, Nighthood has the perfect place for you. His community forest is perfect, but if it seems too crowded(or dangerous), you can purchase the Lifetime VIP Card (500 Gold) and gain access to the VIP Forest, which is way more safe and relaxing than the normal free communtiy forest. Also remember that in the community forest, you can rest at a fountain to gain back lost health!\nSignature Item/Service: Resting place, food and wood`)">Nighthood's Forest</button>
+              <button onclick="alert(`Name: Banehag's Exotics\nDescription: So, maybe you are looking for a nice old item? Or maybe the only item of it's kind? Well, Banehag sure has the stuff for you! He can supply you with lots of rare, exotic items, those of which that will instantly disapear upon holding, meaning you abosorb these and get the power from them! This power can be you learning new fighting moves, spells or a simple stat increase!\nSignature Item/Service: Exotic Items`)">Banehag's Exotics</button>
+              <button onclick="alert(`Name: Gemghoul's Upgrades\nDescription: Looking to upgrade your business? Maybe looking to buy a license to sell more stuff? Head to Gemghoul and they will supply you with the upgrades you want, at a decent pricetag!\nSignature Item/Service: Upgrades and licenses`)">Gemghoul's Upgrades</button>
+              <button onclick="alert(`Name: Cryptstrike's Pets\nDescription: Looking at buying a pet? Come down to Cryptstrike's Pets and grab yourself a slime, dog or even a UFO! You can expect only the best quality animals from us as we handpick from few animals to make a good pet.\nSignature Item/Service: Pets`)">Cryptstrike's Pets</button>
+              <button onclick="alert('Name: ' + playerBusinessName + ' \nDescription: ' + playerBusinessDescription + '\nSignature Item/Service: ' + playerBusinessItem + '\nBusiness Income: ' + playerBusinessIncome + ' Gold')">Player Owned Business</button>
+            </div>
+            <div id="enemy" style="display:none;">
+              <h2 id="enemyName">Enemy Name</h2>
+              <h3 id="enemyHealth">hp/maxhp health</h3>
+              <h3 id="enemyAttack">attack</h3>
+              <h3 id="enemyDefence">defence</h3>
+            </div>
+					</td>
+          <!-- Actions -->
+          <script src="scripts/attacks/basicAttacks.js"></script>
+					<td width=33% height=75% colspan=1>
+						<h1 style="color:white;">Actions</h1>
+            <h2 id="actionConsole"></h2>
+            <div id="freeForest" style="display:none;">
+              <div id="freeForestChoice">
+                
+              </div>
+            </div>
+						<div id="atks" style="display:none;">
+							<button onclick="basicAttack()">Basic Attack</button>
+						</div>
+            <div id="darkAtks" style="display:none;">
+              <button onclick="shadowAttack()">Shadow Attack</button>
+            </div>
+            <div id="lightAtks" style="display:none;">
+              <button onclick="lightAttack()">Light Attack</button>
+            </div>
+					</td>
+				</tr>
+				<tr>
+					<td width=56% height=75% colspan=2>
+						<h2 id=console style="color:white;">Click The Next Button To Start</h2>
+                  <button id=next onclick=next()>Next</button>
+            <div id=theMall style="display:none;">
+              <h2 style="color:orange;">The Mall</h2>
+              <div class="dropup">
+                <button class="dropbtn">Hover</button>
+                <div class="dropup-content">
+                  <a onclick="bladehood()">Bladehood's Business Manager</a>
+                  <a onclick="joe()">Joe's Smeltery</a>
+                  <a onclick="mine()">Cavehound's Mine</a>
+                  <a onclick="forest()">Nighthood's Forest</a>
+                  <a onclick="exotic()">Banehag's Exotics</a>
+                  <a onclick="upgrades()">Gemghoul's Upgrades</a>
+                  <a onclick="petShop()">Cryptstrike's Pets</a>
+                  <a onclick="library()">Library (Info about businesses)</a>
+                </div>
+              </div>
+            </div>
+					</td>
+				</tr>
+			</table>
+			</div>
+    </body>
+	<script src="scripts/startScript.js"></script>
+  <script src="scripts/shopScript.js"></script>
+  <script src="scripts/changeBg.js"></script>
+  <script src="scripts/modal.js"></script>
+  <script src="scripts/functions.js"></script>
+  <script src="scripts/shop/items.js"></script>
+  <script src="scripts/shopBought.js"></script>
+  <script src="scripts/shop/bladehood.js"></script>
+  <script src="scripts/shop/joe.js"></script>
+  <script src="scripts/shop/mine.js"></script>
+  <script src="scripts/shop/forest.js"></script>
+  <script src="scripts/shop/exotic.js"></script>
+  <script src="scripts/shop/upgrades.js"></script>
+  <script src="scripts/shop/petShop.js"></script>
+  <script src="scripts/businessScript.js"></script>
+  <script type="text/javascript">var ac = document.getElementById("actionConsole")</script>
+</html>

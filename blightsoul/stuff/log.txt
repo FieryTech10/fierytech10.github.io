@@ -1,0 +1,10 @@
+v0.1 Alpha:
+- Created Game Development
+- Player Can Start Custom Business (Main feature)
+- Created skilltree
+- Basic Business Upgrade (Sawmil)
+
+*PLANNED* v0.2 Alpha:
+- More Business Upgrades
+- Player Can Hire Workers (generate stock over time)
+- 
