@@ -4,96 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beverages - Luminalia Investment Fund</title>
-    <style>
-        /* Inline CSS for quick adjustments */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: underline;
-            padding: 10px 15px;
-            display: block;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .product-box {
-            background-color: #282828;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            color: #fff;
-        }
-
-        .product-box img {
-            width: 150px;
-            height: auto;
-            margin-right: 20px;
-            border-radius: 5px;
-        }
-
-        .product-box h3 {
-            margin: 0;
-            font-size: 1.2em;
-        }
-
-        .product-box p {
-            margin: 5px 0;
-        }
-
-        .product-box .price {
-            font-size: 1.1em;
-            color: #e94e77;
-        }
-
-        footer {
-            background-color: #333;
-            padding: 1px;
-            text-align: center;
-            font-size: 14px;
-            color: #fff;
-        }
-
-        footer a {
-            color: wheat;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
     <header>
@@ -104,128 +15,115 @@
             <li><a href="../index.html">Home</a></li>
             <li><a href="aboutus.html">About Us</a></li>
             <li><a href="investments.html">Investments</a></li>
+            <li><a href="membership.html">Membership</a></li>
             <li><a href="cruisesandtours.html">Cruises & Tours</a></li>
+            <li><a href="shop.html"><u>Shop</u></a></li>
             <li><a href="faq.html">FAQ</a></li>
+            <li><a href="investmentform.html">Submit Form</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <small style="color: orange;">IMPORTANT: Please Pre-Order your beverages. We may not have your choice on-board. Pre-Ordering will secure your order.<br>Member's receive 3 free food items and 2 free drinks of choice. Any further beverages will be 50% off (if available).</small>
-        <h2>Beverages</h2>
-        <h3>Drinks</h3>
-        <div class="product-box">
-            <img src="../images/CRUZLUX.jpg" alt="CRUZLUX">
-            <div>
-                <h3>CRUZ Lux</h3>
-                <p>Hungry? Thirsty? Try CRUZ Lux, with their new formula your tastebuds will find heaven as your stomach is being filled.</p>
-                <p class="price">Price: 45 UEC</p>
-                <p>Extras: Flow (37 UEC), Dark (47 UEC), Pulse (52 UEC)</p>
+    <main>
+        <div class="container">
+            <div class="content">
+                <h2>Onboard Beverages & Dining</h2>
+                <div class="notice">Important: Please pre-order your beverages. We may not have your choice on-board. Pre-ordering secures your favorites and ensures availability. Members receive three complimentary food items and two drinks of choice—additional beverages are 50% off (if available).</div>
+                <h3>Drinks</h3>
+                <div class="card-grid two-column">
+                    <article class="product-card">
+                        <img src="../images/CRUZLUX.jpg" alt="CRUZ Lux beverage">
+                        <div>
+                            <h4>CRUZ Lux</h4>
+                            <p>Hungry? Thirsty? Try CRUZ Lux—its new formula treats your tastebuds while your stomach is being filled.</p>
+                            <p class="price">Price: 45 UEC</p>
+                            <p>Extras: Flow (37 UEC), Dark (47 UEC), Pulse (52 UEC)</p>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="../images/FizzCola.jpg" alt="Fizz Cola can">
+                        <div>
+                            <h4>Fizzz Cola</h4>
+                            <p>Craving a drink so fizzy it could launch you to Pyro? Fizzz Cola keeps you energized for days!</p>
+                            <p class="price">Price: 32 UEC</p>
+                            <p>Extras: Peach (34 UEC), Triple Berry (36 UEC), Soursop (43 UEC)</p>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="../images/Water.jpg" alt="Bottle of water">
+                        <div>
+                            <h4>Water</h4>
+                            <p>Classic and refreshing. Nothing fancy—except that we serve it to you.</p>
+                            <p class="price">Price: 10 UEC</p>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="../images/Synergy.jpg" alt="Synergy drink">
+                        <div>
+                            <h4>Synergy</h4>
+                            <p>Synergy’s research delivers a nourishing recipe designed to keep you performing at your best.</p>
+                            <p class="price">Price: 42 UEC</p>
+                            <p>Extras: Synergy+ (45 UEC), SynergySport (52 UEC)</p>
+                        </div>
+                    </article>
+                </div>
+                <h3>Meals</h3>
+                <div class="card-grid two-column">
+                    <article class="product-card">
+                        <img src="../images/Whamburger.jpg" alt="Whammers burgers">
+                        <div>
+                            <h4>Whammers&#8482; Burgers</h4>
+                            <ul>
+                                <li>Whamburger Original — <span class="price">60 UEC</span></li>
+                                <li>Whamburger D-Lux — <span class="price">85 UEC</span></li>
+                                <li>Chicken Wham — <span class="price">65 UEC</span></li>
+                                <li>Veggie Wham — <span class="price">70 UEC</span></li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="../images/ClassicDog.jpg" alt="Classic hot dog">
+                        <div>
+                            <h4>Classic Dog</h4>
+                            <p>Made with 100% locally sourced meat.</p>
+                            <p class="price">Price: 34 UEC — Double for 56 UEC</p>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="../images/ChilliDog.jpg" alt="Chilli dog">
+                        <div>
+                            <h4>Chilli Dog</h4>
+                            <p>Made from 21% real meat—the rest is a mystery straight from the factory. Eat at your own risk!</p>
+                            <p class="price">Price: 42 UEC</p>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="../images/TorpedoBurrito.jpg" alt="Torpedo Burrito">
+                        <div>
+                            <h4>Torpedo Burrito&#8482;</h4>
+                            <ul>
+                                <li>Musaka Burrito — <span class="price">45 UEC</span></li>
+                                <li>Dak Galbi Chicken Burrito — <span class="price">42 UEC</span></li>
+                                <li>Citrus Beef Burrito — <span class="price">52 UEC</span></li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="../images/sandwhich.jpg" alt="Freshly made sandwiches">
+                        <div>
+                            <h4>Freshly Made Sandwiches</h4>
+                            <ul>
+                                <li>Turkey — <span class="price">31 UEC</span></li>
+                                <li>Bacon Club — <span class="price">27 UEC</span></li>
+                                <li>Bologna — <span class="price">36 UEC</span></li>
+                                <li>Godmother — <span class="price">40 UEC</span></li>
+                                <li>Pork Katsu — <span class="price">34 UEC</span></li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
-        <div class="product-box">
-            <img src="../images/FizzCola.jpg" alt="FizzCola">
-            <div>
-                <h3>Fizzz Cola</h3>
-                <p>Ever want a drink to be so fizzy it could send you to pyro? Try a Fizzz Cola, you'll be flying for days!</p>
-                <p class="price">Price: 32 UEC</p>
-                <p>Extras: Peach (34 UEC), Triple Berry (36 UEC), Soursop (43 UEC)</p>
-            </div>
-        </div>
-        <div class="product-box">
-            <img src="../images/Water.jpg" alt="Water">
-            <div>
-                <h3>Water</h3>
-                <p>Just your standard water. Nothing special. (Except that we serve it to you!)</p>
-                <p class="price">Price: 10 UEC</p>
-            </div>
-        </div>
-        <div class="product-box">
-            <img src="../images/Synergy.jpg" alt="Synergy">
-            <div>
-                <h3>Synergy</h3>
-                <p>Synergy has been at work, trying to find the best possible nourishing recipe, they might just have found it.</p>
-                <p class="price">Price: 42 UEC</p>
-                <p>Extras: Synergy+ (45 UEC), SynergySport (52 UEC)</p>
-            </div>
-        </div>
-        <h3>Meals</h3>
-        <div class="product-box">
-            <img src="../images/Whamburger.jpg" alt="Whamburgers">
-            <div>
-                <h3>Whammers&#8482; Burgers</h3>
-                <ul>
-                    <li>Whamburger Original - <div class="price">Price: 60 UEC</div></li>
-                    <li>Whamburger D-Lux - <div class="price">Price: 85 UEC</div></li>
-                    <li>Chicken Wham - <div class="price">Price: 65 UEC</div></li>
-                    <li>Veggie Wham  - <div class="price">Price: 70 UEC</div></li>
-                </ul>
-            </div>
-        </div>
-        <div class="product-box">
-            <img src="../images/ClassicDog.jpg" alt="ClassicDog">
-            <div>
-                <h3>Classic Dog</h3>
-                <p>Made with 100% locally sourced meat!</p>
-                <p class="price">Price: 34 UEC - Make it double for 56 UEC!</p>
-            </div>
-        </div>
-        <div class="product-box">
-            <img src="../images/ChilliDog.jpg" alt="ChilliDog">
-            <div>
-                <h3>Chilli Dog</h3>
-                <p>Made from 21% real meat, the rest is pretty much random stuff found in the factory. EAT AT YOUR OWN RISK!</p>
-                <p class="price">Price: 42 UEC</p>
-            </div>
-        </div>
-        <div class="product-box">
-            <img src="../images/TorpedoBurrito.jpg" alt="TorpedoBurrito">
-            <div>
-                <h3>Torpedo Burrito&#8482;</h3>
-                <ul>
-                    <li>Musaka Burrito - <div class="price">Price: 45 UEC</div></li>
-                    <li>Dak Galbi Chicken Burrito - <div class="price">Price: 42 UEC</div></li>
-                    <li>Citrus Beef Burrito - <div class="price">Price: 52 UEC</div></li>
-                </ul>
-            </div>
-        </div>
-        <div class="product-box">
-            <img src="../images/sandwhich.jpg" alt="sandwhiches">
-            <div>
-                <h3>Freshly Made Sandwhiches</h3>
-                <ul>
-                    <li>Turkey<div class="price">Price: 31 UEC</div></li>
-                    <li>Bacon Club<div class="price">Price: 27 UEC</div></li>
-                    <li>Bologna<div class="price">Price: 36 UEC</div></li>
-                    <li>Godmother<div class="price">Price: 40 UEC</div></li>
-                    <li>Pork Katsu<div class="price">Price: 34 UEC</div></li>
-                </ul>
-            </div>
-        </div>
-        <h3>Snacks</h3>
-        <div class="product-box">
-            <img src="../images/chocolatebar.jpg" alt="chocolatebar">
-            <div>
-                <h3>Buster's Chocolate Bar</h3>
-                <p>Peckish? Have a buster. Please make sure you're not lactose intolerant.</p>
-                <p class="price">Price: 9 UEC</p>
-            </div>
-        </div>
-        <div class="product-box">
-            <img src="../images/apple.jpg" alt="apple">
-            <div>
-                <h3>Apple</h3>
-                <p>A healthy snack to keep you going- all this luxury is exhausting.</p>
-                <p class="price">Price: 12 UEC</p>
-            </div>
-        </div>
-        <div class="product-box">
-            <img src="../images/watermelon.jpg" alt="watermelon">
-            <div>
-                <h3>Watermelon Slice</h3>
-                <p>The freshest possible fruit, freshly picked to order.</p>
-                <p class="price">Price: 15 UEC</p>
-            </div>
-        </div>
-    </div>
+    </main>
     <footer>
         <p>&copy; 2954 Luminalia Investment Fund. All rights reserved. | <a href="termsandconditions.html">Terms And Conditions</a></p>
     </footer>

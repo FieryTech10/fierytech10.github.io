@@ -4,157 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop - Luminalia Investment Fund</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1b1b1b;
-            margin: 0;
-            padding: 0;
-            color: #ccc;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            overflow: hidden;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        nav ul li {
-            display: inline-block;
-            position: relative;
-        }
-        nav ul li a {
-            display: block;
-            padding: 14px 20px;
-            text-decoration: none;
-            color: white;
-        }
-        nav ul li a:hover {
-            background-color: #666;
-            color: #fff;
-            text-decoration: underline;
-        }
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h1 {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .highlight {
-            color: #e94e77;
-        }
-        .content {
-            background-color: #282828;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        .section {
-            display: flex;
-            justify-content: space-between;
-        }
-        .box {
-            background-color: #333;
-            border-radius: 5px;
-            padding: 20px;
-            width: 48%;
-        }
-        .box img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .box h3 {
-            margin-bottom: 10px;
-        }
-        .box p {
-            margin-bottom: 20px;
-        }
-        .box button {
-            background-color: #4a90e2;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .box button:hover {
-            background-color: #357ab8;
-            transform: scale(1.05);
-        }
-        .box button:active {
-            transform: scale(1);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .notice {
-            background-color: #E6E6FA; /* Neon Yellow */
-            color: #000; /* Black text for contrast */
-            padding: 10px;
-            border: 2px solid #000; /* Optional border for extra emphasis */
-            border-radius: 5px;
-            font-weight: bold;
-            max-width: 40%;
-            margin: 20px auto;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
     <header>
-        <h1>Shop</h1>
+        <h1>Luminalia Investment Fund</h1>
     </header>
     <nav>
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="aboutus.html">About Us</a></li>
             <li><a href="investments.html">Investments</a></li>
-            <li><a href="cruisesandtours.html">Cruises and Tours</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="cruisesandtours.html">Cruises & Tours</a></li>
+            <li><a href="shop.html"><u>Shop</u></a></li>
             <li><a href="faq.html">FAQ</a></li>
+            <li><a href="investmentform.html">Submit Form</a></li>
             <li><a href="contactus.html">Contact Us</a></li>
         </ul>
     </nav>
-    <h2 class="notice" style="text-align: center;" style="color: cornsilk;">All Items Are Pre-Ordered. Only a select few items will be brought on-board.</h2>
-    <div class="container">
-        <div class="section">
-            <div class="box">
-                <img src="../images/beverages.jpg" alt="Beverages Cover Photo">
-                <h3>Beverages</h3>
-                <p>Quench your thirst with our selection of intergalactic beverages. From refreshing drinks to exotic cocktails, we have something for every taste bud. Browse our collection and discover new flavors from across the galaxy!</p>
-                <button onclick="window.location.href='beverages.html'">Browse Beverages</button>
-                <small>*Licensed to sell Fizz Cola!!!</small>
-            </div>
-            <div class="box">
-                <img src="../images/gifts-toys.jpg" alt="Gifts & Toys Cover Photo">
-                <h3>Gifts & Toys</h3>
-                <p>Find the perfect gift or treat yourself to something special from our collection of unique gifts and toys. From rare space artifacts to fun and quirky items or even clothing, we have something for every occasion. Browse our selection and discover the perfect gift or souvenir!</p>
-                <button onclick="window.location.href='giftshop.html'">Browse Gifts & Toys</button>
+    <main>
+        <div class="container">
+            <div class="content">
+                <h2>Pre-Order Boutique</h2>
+                <div class="notice">All items are pre-ordered and delivered to your cabin. Only a curated selection is stocked on board. Reserve ahead to guarantee availability.</div>
+                <div class="card-grid two-column">
+                    <article class="feature-card">
+                        <img src="../images/beverages.jpg" alt="Assortment of beverages">
+                        <div>
+                            <h3>Beverages & Dining</h3>
+                            <p>Quench your thirst and satisfy every craving with premium drinks and fresh meals ready for takeoff.</p>
+                            <a class="cta-button" href="beverages.html">Browse Beverages</a>
+                            <small>* Licensed to serve Fizzz Cola selections.</small>
+                        </div>
+                    </article>
+                    <article class="feature-card">
+                        <img src="../images/gifts-toys.jpg" alt="Gift items and toys">
+                        <div>
+                            <h3>Gifts & Toys</h3>
+                            <p>Discover plush companions, luxury apparel, and memorable souvenirs curated for Luminalia travelers.</p>
+                            <a class="cta-button" href="giftshop.html">Shop Gifts & Toys</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
     <footer>
-        <p>&copy; 2954 Luminalia Investment Fund. All rights reserved. | <a href="termsandconditions.html" style="color: wheat;">Terms And Conditions</a></p>
+        <p>&copy; 2954 Luminalia Investment Fund. All rights reserved. | <a href="termsandconditions.html">Terms And Conditions</a></p>
     </footer>
 </body>
 </html>
